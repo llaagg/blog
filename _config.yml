@@ -1,0 +1,10 @@
+title: Workspace Notes
+description: A simple technical blog about tools, teamwork, and engineering.
+url: "https://llaagg.github.io"
+baseurl: "/blog"
+
+collections:
+  posts:
+    output: true
+
+markdown: kramdown

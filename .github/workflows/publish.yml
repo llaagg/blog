@@ -1,0 +1,36 @@
+name: Build and publish Jekyll site
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check out source
+        uses: actions/checkout@v4
+
+      - name: Set up Ruby
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: "3.3"
+          bundler-cache: true
+
+      - name: Build Jekyll site
+        run: bundle exec jekyll build --baseurl "/blog"
+
+      - name: Publish to blog branch
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_branch: blog
+          publish_dir: ./_site
+          force_orphan: true
+          commit_message: "Publish Jekyll site"
