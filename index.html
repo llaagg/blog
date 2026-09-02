@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="A simple blog about collaborative engineering workspaces.">
+  <title>Workspace Notes</title>
+  <script>
+    const colorScheme = window.matchMedia("(prefers-color-scheme: dark)");
+
+    function setColorMode() {
+      document.documentElement.setAttribute("data-bs-theme", colorScheme.matches ? "dark" : "light");
+    }
+
+    setColorMode();
+    colorScheme.addEventListener("change", setColorMode);
+  </script>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg bg-body-tertiary border-bottom" aria-label="Main navigation">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">Workspace Notes</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#siteNav" aria-controls="siteNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="siteNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="#article">Latest post</a></li>
+          <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="workspace-01/Readme.md">Markdown source</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <header class="bg-primary text-white py-5">
+    <div class="container">
+      <p class="lead mb-2">A simple technical blog</p>
+      <h1 class="display-4">Workspace Notes</h1>
+      <p class="lead mb-0">Practical notes about tools, teamwork, and engineering.</p>
+    </div>
+  </header>
+
+  <main class="container py-5">
+    <div class="row g-5">
+      <article id="article" class="col-lg-8">
+        <p class="text-muted">July 12, 2026 - 8 minute read</p>
+        <h2>The Multi-Role Team Starter Pack</h2>
+        <p class="lead">A simple workspace setup for developers, product managers, QA, and DevOps to collaborate without adding another platform to maintain.</p>
+        <hr class="my-4">
+
+        <h3>Start with one shared foundation</h3>
+        <p>When collaboration spans repositories, roles, and environments, complexity arrives quickly. A shared VS Code multi-root workspace gives everyone the same map: documentation, application code, and infrastructure in one window.</p>
+        <pre class="bg-body-tertiary border rounded p-3"><code>{
+  "folders": [
+    { "name": "Documentation", "path": "./docs" },
+    { "name": "Backend Service", "path": "./backend" },
+    { "name": "Infrastructure", "path": "./infrastructure" }
+  ]
+}</code></pre>
+
+        <h3 class="mt-5">Keep the intelligence local</h3>
+        <p>Good defaults matter. Exclude generated folders such as <code>node_modules</code>, <code>build</code>, and <code>dist</code> from indexing so the useful signal stays easy to find.</p>
+        <blockquote class="blockquote border-start border-primary border-4 ps-3 my-4">The best team tool is often the one that makes the existing work easier to see.</blockquote>
+
+        <h3 class="mt-5">Let documentation stay alive</h3>
+        <p>Architecture should not be a museum exhibit. Keep diagrams in plain-text Markdown files, use Mermaid when a visual is helpful, and make updates part of the same workflow as code changes.</p>
+
+        <h3 class="mt-5">Make every role a first-class citizen</h3>
+        <p>Product managers can keep requirements and acceptance criteria close to the code. Developers get the full context of adjacent services. QA can run shared tasks. DevOps can shape infrastructure with a clear view of the APIs it supports.</p>
+        <p>That is the whole idea: fewer handoffs hidden in private tools, more context available in the open, and a workspace that helps the team stay aligned.</p>
+      </article>
+      <aside class="col-lg-4">
+        <div class="card">
+          <div class="card-body">
+            <h2 class="h5">In this post</h2>
+            <nav aria-label="Article sections">
+              <ul class="list-group list-group-flush">
+                <li class="list-group-item px-0"><a href="#article">Shared foundation</a></li>
+                <li class="list-group-item px-0"><a href="#article">Local intelligence</a></li>
+                <li class="list-group-item px-0"><a href="#article">Living documentation</a></li>
+                <li class="list-group-item px-0"><a href="#article">Every role included</a></li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+      </aside>
+    </div>
+
+    <section id="about" class="border-top mt-5 pt-4">
+      <h2 class="h4">About these notes</h2>
+      <p>A small public notebook about thoughtful tooling, collaborative systems, and technical work that is easier to share.</p>
+    </section>
+  </main>
+
+  <footer class="bg-body-tertiary border-top py-4">
+    <div class="container">Workspace Notes · Published on GitHub Pages</div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</body>
+</html>
