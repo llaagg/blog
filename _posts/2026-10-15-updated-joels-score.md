@@ -4,7 +4,7 @@ title: Updated Joel's Score
 date: 2026-10-15
 ---
 
-Based on great article from Joel Spolsky's blog - made in August 9, 2000 by Joel Spolsky, this post revisits and updates the concepts discussed in the original article.
+Based on [great article](https://www.joelonsoftware.com/2000/08/09/the-joel-test-12-steps-to-better-code/) from Joel Spolsky's blog - made in August 9, 2000 by Joel Spolsky, this post revisits and updates the concepts discussed in the original article.
 
 The Joel Test modified and refreshed for modern software development practices. I've allowed to rename and adapt the questions to better fit contemporary development workflows. Points which were modifed from the orgiginal post:
 - Question 2: Updated to focus on automated build processes.
@@ -57,7 +57,7 @@ The Joel Test modified and refreshed for modern software development practices. 
    Do you have automated tests as part of your pipeline. Tests should be done in separted repository to ensure isolation and maintainability. Developers can contribute and use during implementation.
 
 11. Do new candidates write code during their interview?
-
+    
    Simple coding exercise to evaluate the candidate's problem-solving skills and coding ability. In line with company expecations. 
 
 12. Do you use design from UX designer?
