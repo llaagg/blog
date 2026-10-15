@@ -1,2 +1,2 @@
 # llaagg blog
-(Blog)[https://llaagg.github.io/blog/}
+[Blog](https://llaagg.github.io/blog/)
