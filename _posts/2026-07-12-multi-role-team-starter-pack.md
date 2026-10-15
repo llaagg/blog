@@ -4,20 +4,24 @@ title: Simple sandbox setup for AI Agent and team collaboration
 date: 2026-07-12
 ---
 
-A simple workspace setup for developers, product managers, QA, and DevOps to collaborate without adding another platform to maintain. Idea goes from and attempt to ensure smooth collaboration across roles and repositories, while keeping the team aligned on the same shared context with support of AI agents.
+Agile teams often face challenges in maintaining smooth collaboration across different roles and repositories. This setup aims to address those challenges by providing a shared workspace that supports AI agents for enhanced productivity.
+
+Idea here is to create simple tooling composition for anyone involved in the development process, enabling them to collaborate effectively without the need for complex setups or additional platforms.
+
+Agile team that consists of developers, product managers, QA, and DevOps can benefit from this setup by having a unified workspace that provides context-aware assistance and streamlines collaboration across different roles. No one is forced to use any specific tool, allowing team members to work with their preferred tools while still maintaining a shared context.
 
 ## Tooling & context
 
 | Context | Tool |
 | --- | --- |
-| Source code | `git clone` |
-| QA tests | `git clone` |
-| Infrastructure as code | `git clone` |
-| Documentation | Azure DevOps Wiki (`git clone`)  |
-| Backlog | Azure DevOps Boards (`az cli`) / GitHub Projects (`gh cli`) |
+| Source code | `git clone` | - source is check out locally
+| QA tests | `git clone` | - tests are checked out locally
+| Infrastructure as code | `git clone` | - IaC is checked out locally
+| Documentation | Azure DevOps Wiki (`git clone`)  | - documentation is checked out locally from wikis
+| Backlog | Azure DevOps Boards (`az cli`) / GitHub Projects (`gh cli`) | - simple cli tooling (to use with mcp setup)
 | Harness | `copilot` in vs code |
-| IDE | VS Code (`.code-workspace`) | 
-| Diagrams | `Mermaid.js` in Markdown files |
+| IDE | VS Code (`.code-workspace`) |  that collects all related repositories and provides a unified workspace for development and collaboration. This way llm can navigate all related code, tests, documentation, and infrastructure files seamlessly.
+| Diagrams | `Mermaid.js` in Markdown files | to enable shared view of architectural diagrams and facilitate collaboration on system design. (even with LLM contribution)
 
 ## Composition of the workspace
 All repositories should be cloned locally and opened in VSCode workspace. Opening VS Code in that setup allows access to all perspectives. Copilot needs only some small guide to understand repos or folders structure. It can then provide context-aware suggestions and code completions across the entire workspace.
