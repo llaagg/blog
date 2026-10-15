@@ -57,8 +57,9 @@ The Joel Test modified and refreshed for modern software development practices. 
    Do you have automated tests as part of your pipeline. Tests should be done in separted repository to ensure isolation and maintainability. Developers can contribute and use during implementation.
 
 11. Do new candidates write code during their interview?
-   
+
    Simple coding exercise to evaluate the candidate's problem-solving skills and coding ability. In line with company expecations. 
 
 12. Do you use design from UX designer?
-    You use design from UX designer in line with company guidelines and ensure that usability testing is conducted to validate the effectiveness of the design. You maintain a feedback loop to continuously improve the user experience based on the insights gathered from usability testing.
+   
+   You use design from UX designer in line with company guidelines and ensure that usability testing is conducted to validate the effectiveness of the design. You maintain a feedback loop to continuously improve the user experience based on the insights gathered from usability testing.
